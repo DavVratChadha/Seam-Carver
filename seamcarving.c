@@ -4,9 +4,6 @@
 #include <stdlib.h>
 #include <math.h>
 
-
-//Q1
-
 void calc_energy(struct rgb_img *im, struct rgb_img **grad){
 
     double rx, ry, gx, gy, bx, by;
@@ -87,8 +84,6 @@ double minimum(double a, double b, double c){
     }
 }
 
-//Q2
-
 
 void dynamic_seam(struct rgb_img *grad, double **best_arr){
     int height = grad->height;
@@ -132,7 +127,6 @@ void dynamic_seam(struct rgb_img *grad, double **best_arr){
     }
 }
 
-//Q3
 int min_index(double *best, int width, int i, int j){
     if(j > 0 && j < width - 1){
         double val1 = *(best + width*i + j - 1);
